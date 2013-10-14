@@ -12,10 +12,10 @@ public class ResourceLoader {
 
 	/**
 	 * 
-	 * Load a resource from a given resource path and return it as file.
+	 * Load a resource from a given resource path and return it as {@link File java.io.File}.
 	 * 
 	 * @param resourcePath The path of resource.
-	 * @return The resource as file.
+	 * @return The resource as {@link File java.io.File}.
 	 */
 	public static File loadResourceAsFile(String resourcePath){
 		if(resourcePath.startsWith("/")){
@@ -28,10 +28,10 @@ public class ResourceLoader {
 	
 	/**
 	 * 
-	 * Load a resource from given resource path and return it as stream.
+	 * Load a resource from given resource path and return it as {@link InputStream java.io.InputStream}.
 	 * 
 	 * @param resourcePath The path of resource.
-	 * @return The resource as stream.
+	 * @return The resource as {@link InputStream java.io.InputStream}.
 	 */
 	public static InputStream loadResourceAsStream(String resourcePath) {
 		if(resourcePath.startsWith("/")){
@@ -44,10 +44,10 @@ public class ResourceLoader {
 	
 	/**
 	 * 
-	 * Load a resource from given resource path and return it as url.
+	 * Load a resource from given resource path and return it as {@link URL java.net.URL}.
 	 * 
 	 * @param resourcePath The path of resource.
-	 * @return The resource as url.
+	 * @return The resource as {@link URL java.net.URL}.
 	 */
 	public static URL loadResourceAsURL(String resourcePath) {
 		if(resourcePath.startsWith("/")){
@@ -60,10 +60,10 @@ public class ResourceLoader {
 	
 	/**
 	 * 
-	 * Load a resource from given resource path and return it as url.
+	 * Load a resource from given resource path and return it as {@link URI java.net.URI}.
 	 * 
 	 * @param resourcePath The path of resource.
-	 * @return The resource as url.
+	 * @return The resource as {@link URI java.net.URI}.
 	 */
 	public static URI loadResourceAsUri(String resourcePath) {
 		URI resourceAsURI = null;
@@ -81,7 +81,12 @@ public class ResourceLoader {
 	}
 	
 	/**
+	 * 
 	 * Load a resource from given resource path and return it as new (java 7) {@link Path java.nio.file.Path}
+	 * 
+	 * @param resourcePath The path of resource.
+	 * @return The resource as {@link Path java.nio.file.Path}.
+	 * 
 	 * @see Path
 	 * @see Paths
 	 */
