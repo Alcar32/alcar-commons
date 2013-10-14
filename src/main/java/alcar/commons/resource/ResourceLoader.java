@@ -86,6 +86,6 @@ public class ResourceLoader {
 	 * @see Paths
 	 */
 	public static Path loadResourceAsNioFilePath(String resourcePath) {
-		return loadResourceAsFile(resourcePath).toPath(); 
+		return Paths.get(loadResourceAsUri(resourcePath)); 
 	}
 }
