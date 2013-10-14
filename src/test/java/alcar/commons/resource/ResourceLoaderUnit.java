@@ -26,5 +26,6 @@ public class ResourceLoaderUnit {
 	public void loadResourceAsNioPathUnit() throws IOException {
 		Path nioPath = ResourceLoader.loadResourceAsNioFilePath("/test/test.txt");
 		assertTrue(Files.exists(nioPath));
+		assertTrue(Files.isRegularFile(nioPath));
 	}
 }
