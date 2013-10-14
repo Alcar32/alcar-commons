@@ -5,6 +5,8 @@ import java.io.InputStream;
 import java.net.URI;
 import java.net.URISyntaxException;
 import java.net.URL;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 
 public class ResourceLoader {
 
@@ -76,5 +78,14 @@ public class ResourceLoader {
 			System.err.println("A resource path must(!) begin with a \"/\"");
 			return resourceAsURI;
 		}
+	}
+	
+	/**
+	 * Load a resource from given resource path and return it as new (java 7) {@link Path java.nio.file.Path}
+	 * @see Path
+	 * @see Paths
+	 */
+	public static Path loadResourceAsNioFilePath(String resourcePath) {
+		return loadResourceAsFile(resourcePath).toPath(); 
 	}
 }
